@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        height: 80vh;
+        width: 100%;
+        background-color: aqua;
+        display: flex;
+        justify-content: space-around;
+    }
+    .ball{
+        height: 300px;
+        width: 300px;
+        border: 2px solid black;
+        border-radius: 50px;
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+    </div>
+</body>
+<script>
+    let a= Math.random() * 5
+    let b= Math.random() * 5
+    console.log(a);
+    console.log(b);
+
+    
+    function ran(b){
+        let c=["red","blue","purple","green","yellow"]
+        let k=Math.floor(b);
+        return c[k];
+    }
+
+
+    function ranC(a){
+        let k=Math.floor(a);
+        return k;
+    }
+
+
+    if(a<0.22){
+        document.querySelectorAll(".ball")[ranC(a)].style.backgroundColor=ran(b);
+    }
+    else if(a<0.44 && a>0.22){
+        document.querySelectorAll(".ball")[ranC(a)].style.backgroundColor=ran(b);
+    }
+    else if(a>0.44 && a<0.66){
+        document.querySelectorAll(".ball")[ranC(a)].style.backgroundColor=ran(b);
+    }
+    else if(a<0.88 && a>0.66){
+        document.querySelectorAll(".ball")[ranC(a)].style.backgroundColor=ran(b);
+    }
+    else if(a>0.88 ){
+        document.querySelectorAll(".ball")[ranC(a)].style.backgroundColor=ran(b);
+    }
+</script>
+</html>

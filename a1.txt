@@ -1,0 +1,23 @@
+<div class="main2">
+        <div class="line">
+            <div class="p2l1">Enjoy on your TV</div>
+        <div class="p2l2">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</div>
+        </div>
+        <div class="media1">
+            <img src="tv.png" alt="">
+            <video src="video-tv.m4v" muted autoplay loop></video>
+        </div>
+    </div>
+
+
+    .media1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(tv.png);
+    background-size: contain;
+    z-index: 1;
+}

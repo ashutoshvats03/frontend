@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .container {
+        border: 2px solid black;
+        display: grid;
+        grid-template-areas: "nav nav nav nav nav"
+            "menu menu menu menu menu"
+            "menubar  maincontent maincontent maincontent maincontent"
+            "footer footer footer footer footer";
+    }
+
+    .nav {
+        height: 15vh;
+        grid-area: nav;
+        background-color: rgb(69, 8, 69);
+        display: grid;
+        grid-template-areas: "nav1 nav2";
+    }
+
+
+
+    .nav1 {
+        font-weight: 700;
+        font-size: larger;
+        justify-self: start;
+        align-self: center;
+        color: rgb(183, 35, 183);
+        padding: 0px 50px;
+    }
+
+
+
+    .nav2 {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+    .content {
+        color: aliceblue;
+        font-size: large;
+        font-weight: 200;
+        text-decoration: none;
+        display: flex;
+        gap: 20px;
+    }
+    button{
+        background-color: rgb(151, 75, 151);
+        color: aliceblue;
+        font-size: medium;
+        font-weight: 200;
+        border-radius: 10px;
+        border: none;
+        text-align: center;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        margin-top: -0.5rem;
+        margin-bottom: -0.5rem;
+    }
+
+
+
+    .menu {
+        border-top: 1px solid white;
+        height: 10vh;
+        grid-area: menu;
+        background-color: rgb(69, 8, 69);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;   
+    }
+    .link {
+        color: aliceblue;
+        font-size: large;
+        font-weight: 200;
+        text-decoration: none;
+    }
+
+
+
+    .menubar {
+        height: 85vh;
+        grid-area: menubar;
+        background-color: rgb(28, 34, 48);
+        font-size: 30px;
+        color: #ae4dcc;
+        
+    }
+
+
+
+
+    .maincontent {
+        height: 85vh;
+        grid-area: maincontent;
+        background-color: rgb(53, 42, 53);
+    }
+    .box{
+        position: relative;
+        height: 85vh;
+        background: #09535b;  
+    }
+    .ball{
+            position: absolute;
+            
+            height: 30px;
+            width: 30px;
+            border-radius: 70px;
+            
+            animation: bounceY 1s ease-out infinite alternate-reverse ,bounceX 9s linear infinite alternate;
+        }
+
+        @keyframes bounceY {
+            from{
+                background: #000;
+            }
+            to{
+                transform: translateY(74vh);
+            }
+        }
+        @keyframes bounceX {
+            from{
+                background: #8dd633;
+            }
+            to{
+                background: #780b0b;
+                transform: translateX(54vw);
+            }
+        }
+
+
+
+    .footer {
+        height: 30vh;
+        grid-area: footer;
+        background-color: rgb(39, 37, 37);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <span class="nav1">
+                &lt/&gt CODE WITH HARRY
+            </span>
+            <span class="nav2">
+                <span class="content">
+                    <a class="content" href="https://www.codewithharry.com/">Home</a>
+                    <a class="content" href="https://www.codewithharry.com/videos/">Courses</a>
+                    <a class="content" href="">Tutorial</a>
+                    <a class="content" href="https://www.codewithharry.com/blog/">Blog</a>
+                    <a class="content" href="https://www.codewithharry.com/notes/">Notes</a>
+                    <a class="content" href="https://www.codewithharry.com/contact/">Contact</a>
+                    <a class="content" href="https://www.codewithharry.com/my-gear/">My Gear</a>
+                    <a class="content" href="https://www.codewithharry.com/work/">Work With Us</a>
+                    <button>LOGIN</button>
+                    <button>SIGNUP</button>
+                </span>
+            </span>
+        </div>
+        <div class="menu">
+            <a class="link" href="https://www.codewithharry.com/tutorial/html-home/">HTML</a>
+            <a class="link" href="https://www.codewithharry.com/tutorial/css-home/">CSS</a>
+            <a class="link" href="https://www.codewithharry.com/tutorial/js/">JS</a>
+            <a class="link" href="https://www.codewithharry.com/tutorial/c/">C</a>
+            <a class="link" href="https://www.codewithharry.com/tutorial/cplusplus/">C++</a>
+            <a class="link"  href="https://www.codewithharry.com/tutorial/java/">JAVA</a>
+            <a class="link" href="https://www.codewithharry.com/tutorial/python/">PYTHON</a>
+            <a class="link" href="https://www.codewithharry.com/tutorial/php/">PHP</a>
+            <a class="link" href="https://www.codewithharry.com/tutorial/react_home/">REACT JS</a>
+        </div>
+        <div class="menubar">
+           <div>
+                <label for="username" >ENTER USERNAME</label>
+                <input type="text" id="username" name="username" placeholder="ENTER NAME" autofocus>
+           </div>
+           <div>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">female</label>
+           </div>
+           <div>
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <label for="subscribe">Saw this website</label>
+        </div>
+        </div>
+        <div class="maincontent">
+            <div class="box">
+                <div class="ball"></div>
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-size:100px;
+        font-weight: bolder;
+        color: cyan;
+    }
+    .nav{
+        height: 500px;
+        width: 100%;
+        background-color: rgb(31, 46, 46);
+        display: flex;
+        justify-content: space-around;
+    }
+</style>
+<body>
+    <div class="nav">
+        <div class="element">Home</div>
+        <div class="element">About</div>
+        <div class="element">Log In</div>
+        <div class="element">Log Out</div>
+        <div class="element">Exit</div>
+    </div>
+</body>
+<script>
+    document.querySelectorAll(".element").forEach(e => {  ///e is not increasing like number its the lementing pointer like thing
+        if(e === document.body.firstElementChild.children[0] || e === document.body.firstElementChild.children[2]){
+            e.style.color="red";
+        }
+    });
+</script>
+</html>
